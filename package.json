@@ -23,11 +23,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YourUsername/YourRepoName.git"
+    "url": "https://github.com/ChoruOfficial/-Exocore-Aternos.git"
   },
   "social": {
-    "github": "https://github.com/YourUsername",
-    "facebook": "https://facebook.com/YourProfile"
+    "github": "https://github.com/ChoruOfficial",
+    "facebook": "https://www.facebook.com/share/19KrEB93gM/"
   },
   "scripts": {
     "build": "tsup && node post-build.js",
@@ -38,7 +38,8 @@
     "minecraft",
     "bot",
     "api",
-    "puppeteer"
+    "puppeteer",
+    "exocore"
   ],
   "dependencies": {
     "axios": "^1.9.0",
