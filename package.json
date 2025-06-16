@@ -1,15 +1,68 @@
 {
-  "name": "nodejs",
+  "name": "@Exocore/Aternos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "An unofficial API client to manage and interact with Aternos servers using Puppeteer.",
+  "author": "Exocore",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=20.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YourUsername/YourRepoName.git"
+  },
+  "social": {
+    "github": "https://github.com/YourUsername",
+    "facebook": "https://facebook.com/YourProfile"
+  },
+  "scripts": {
+    "build": "tsup && node post-build.js",
+    "release": "npm run build && auto shipit"
+  },
+  "keywords": [
+    "aternos",
+    "minecraft",
+    "bot",
+    "api",
+    "puppeteer"
+  ],
   "dependencies": {
-    "@types/node": "^22.13.11"
+    "axios": "^1.9.0",
+    "axios-cookiejar-support": "^4.0.7",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.1.0",
+    "devtools-protocol": "^0.0.1473885",
+    "extract-zip": "^2.0.1",
+    "form-data": "^4.0.3",
+    "freeport": "^1.0.5",
+    "gradient-string": "^2.0.0",
+    "proxy-chain": "^2.5.9",
+    "puppeteer-core": "^24.10.1",
+    "stable-chromium": "^127.0.0",
+    "tough-cookie": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/freeport": "^1.0.24",
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^24.0.1",
+    "auto": "^11.1.1",
+    "puppeteer": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.3",
+    "typescript": "^5.8.3"
   }
 }

@@ -1,0 +1,32 @@
+{
+  "name": "stable-chromium",
+  "version": "127.0.0",
+  "description": "A library to install stable Chromium for testing via Gauge and Taiko",
+  "chromiumVersion": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winstoniuss/stable-chromium.git"
+  },
+  "keywords": [
+    "chromium",
+    "browser",
+    "testing",
+    "gauge",
+    "taiko"
+  ],
+  "author": "chuv@1c.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/winstoniuss/stable-chromium/issues"
+  },
+  "homepage": "https://github.com/winstoniuss",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "extract-zip": "^2.0.1"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "Chrome_URL": "\\\\chicago.dept07\\GR771\\vadim\\chrome.zip",
+  "DOWNLOAD_PATH": "./chromium.zip",
+  "EXTRACT_PATH": "./stable-chromium/chrome-linux"
+}

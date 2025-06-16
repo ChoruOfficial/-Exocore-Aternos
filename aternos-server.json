@@ -1,0 +1,18 @@
+{
+  "servers": [
+    {
+      "name": "ChoruOfficial",
+      "id": "5oMb5QMayDeWOxxG",
+      "status": "offline",
+      "software": "Bedrock 1.21.84.1",
+      "players": "0/20"
+    },
+    {
+      "name": "ChoruOfficial-c0tV",
+      "id": "XETpKMKFunFCo6Pi",
+      "status": "offline",
+      "software": "Vanilla 1.21.5",
+      "players": "0/20"
+    }
+  ]
+}
