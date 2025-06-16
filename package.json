@@ -1,5 +1,5 @@
 {
-  "name": "@Exocore/Aternos",
+  "name": "Exocore-Aternos",
   "version": "1.0.0",
   "description": "An unofficial API client to manage and interact with Aternos servers using Puppeteer.",
   "author": "Exocore",

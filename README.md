@@ -5,7 +5,7 @@ Get Server Info: Retrieve the address, port, software, and other details.
 Live Console Viewer: View the server console in real-time and automatically send welcome/goodbye messages to players.🚀 InstallationTo use this library in your project, install it via npm:npm install aternos-unofficial-api
 ⚙️ How to UseHere is a basic example of how to import and use the functions.import * as Aternos from 'aternos-unofficial-api';
 ```javascript
-const Aternos require("@Exocore/Aternos")
+const Aternos require("Exocore-Aternos")
 const main = async () => {
   try {
     const cookies = await Aternos.loginToAternos("YourUsername", "YourPassword");
