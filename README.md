@@ -5,7 +5,7 @@ Get Server Info: Retrieve the address, port, software, and other details.
 Live Console Viewer: View the server console in real-time and automatically send welcome/goodbye messages to players.🚀 InstallationTo use this library in your project, install it via npm:npm install aternos-unofficial-api
 ⚙️ How to UseHere is a basic example of how to import and use the functions.import * as Aternos from 'aternos-unofficial-api';
 ```javascript
-const Aternos require("aternos-unofficial-api")
+const Aternos = require("aternos-unofficial-api")
 const main = async () => {
   try {
     const cookies = await Aternos.loginToAternos("YourUsername", "YourPassword");
@@ -46,49 +46,20 @@ FROM node:20-slim
 # Step 2: Install Puppeteer Dependencies
 # These are required for Chromium to run correctly inside the container
 ```Dockerfile
-RUN apt-get update && apt-get install -y \
-    ca-certificates \
-    fonts-liberation \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libc6 \
-    libcairo2 \
-    libcups2 \
-    libdbus-1-3 \
-    libexpat1 \
-    libfontconfig1 \
-    libgbm1 \
-    libgcc1 \
-    libglib2.0-0 \
-    libgtk-3-0 \
-    libnspr4 \
-    libnss3 \
-    libpango-1.0-0 \
-    libpangocairo-1.0-0 \
-    libstdc++6 \
-    libx11-6 \
-    libx11-xcb1 \
-    libxcb1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrandr2 \
-    libxrender1 \
-    libxss1 \
-    libxtst6 \
-    lsb-release \
-    wget \
-    xdg-utils \
-    --no-install-recommends
+FROM node:18
 
-WORKDIR /usr/src/app
-COPY package*.json ./
+RUN apt-get update && \
+    apt-get install -y wget gnupg ca-certificates chromium
+
+WORKDIR /app
+
+COPY package.json ./
 RUN npm install
+
 COPY . .
-CMD [ "npm", "start" ]
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]
 ```
 📜 LicenseThis project is licensed under the MIT License - see the LICENSE file for details.
