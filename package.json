@@ -1,6 +1,6 @@
 {
   "name": "aternos-unofficial-api",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "An unofficial API client to manage and interact with Aternos servers using Puppeteer.",
   "author": "Exocore",
   "license": "MIT",
