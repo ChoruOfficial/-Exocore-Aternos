@@ -1,8 +1,6 @@
 import { getFreePort, resolveChromiumPath, randomUserAgent } from './global/set';
 import puppeteer, { Browser, Page, Cookie } from 'puppeteer-core';
 import { Server as ProxyChainServer } from 'proxy-chain';
-import fs from 'fs';
-import path from 'path';
 
 interface ServerInfo {
   name: string | null;
@@ -16,21 +14,7 @@ interface ServerListResponse {
   servers: ServerInfo[];
 }
 
-const serverListCachePath = path.resolve(process.cwd(), 'aternos-server.json');
-
 export async function getServerList(cookies: Cookie[]): Promise<ServerListResponse> {
-  if (fs.existsSync(serverListCachePath)) {
-    try {
-      const raw = fs.readFileSync(serverListCachePath, 'utf8');
-      if (raw.trim().length > 0) {
-        const data: ServerListResponse = JSON.parse(raw);
-        return data;
-      }
-    } catch {
-      console.warn('⚠️ Invalid server list cache file. Regenerating...');
-    }
-  }
-
   const port = await getFreePort();
   const proxyServer = new ProxyChainServer({ port });
   await proxyServer.listen(() => {});
@@ -84,10 +68,6 @@ export async function getServerList(cookies: Cookie[]): Promise<ServerListRespon
       });
       return serverList;
     });
-
-    if (servers.length > 0) {
-      fs.writeFileSync(serverListCachePath, JSON.stringify({ servers }, null, 2));
-    }
 
   } catch (error) {
     console.error(`❌ An error occurred during server list fetching:`, error);
